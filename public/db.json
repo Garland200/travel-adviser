@@ -1,0 +1,156 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "testuser",
+      "password": "test123",
+      "email": "user@test.com",
+      "favorites": [1, 3],
+      "bio": "Travel enthusiast exploring the world",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      "id": "77bf",
+      "username": "Garland",
+      "password": "987654321",
+      "email": "GARLANDLEO200@GMAIL.COM",
+      "favorites": [2, 4],
+      "bio": "Adventure seeker and photography lover",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+    }
+  ],
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Bali",
+      "location": "Indonesia",
+      "description": "Tropical paradise known for its forested volcanic mountains, iconic rice paddies, beaches and coral reefs.",
+      "type": "Beach",
+      "rating": 4.7,
+      "priceRange": {
+        "min": 50,
+        "max": 300
+      },
+      "images": [
+        "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1518544866330-95b3e5aafd7b?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=800&auto=format&fit=crop&q=80"
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "1",
+          "username": "testuser",
+          "rating": 5,
+          "comment": "Absolutely breathtaking sunsets!",
+          "date": "2024-03-15",
+          "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+        }
+      ],
+      "highlights": [
+        "Ubud Monkey Forest",
+        "Tanah Lot Temple",
+        "Tegallalang Rice Terraces"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ubud",
+      "location": "Bali, Indonesia",
+      "description": "Cultural heart of Bali with traditional crafts, dance, and lush rainforests.",
+      "type": "Cultural",
+      "rating": 4.5,
+      "priceRange": {
+        "min": 40,
+        "max": 250
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517713982677-4b66332f98de?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1564429091446-8d0ab7fad706?w=800&auto=format&fit=crop&q=80"
+      ],
+      "reviews": [
+        {
+          "id": 2,
+          "userId": "77bf",
+          "username": "Garland",
+          "rating": 4,
+          "comment": "Amazing cultural experiences everywhere",
+          "date": "2024-02-20",
+          "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+        }
+      ],
+      "highlights": [
+        "Sacred Monkey Forest Sanctuary",
+        "Ubud Palace",
+        "Tegallalang Rice Terrace"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Kyoto",
+      "location": "Japan",
+      "description": "Former imperial capital known for its classical Buddhist temples, gardens, and traditional wooden houses.",
+      "type": "Historical",
+      "rating": 4.9,
+      "priceRange": {
+        "min": 70,
+        "max": 400
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1578645510447-e68b9f49d4f0?w=800&auto=format&fit=crop&q=80"
+      ],
+      "reviews": [
+        {
+          "id": 3,
+          "userId": "1",
+          "username": "testuser",
+          "rating": 5,
+          "comment": "The temples are magical during cherry blossom season",
+          "date": "2024-01-10",
+          "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+        }
+      ],
+      "highlights": [
+        "Fushimi Inari Shrine",
+        "Kinkaku-ji (Golden Pavilion)",
+        "Arashiyama Bamboo Forest"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Paris",
+      "location": "France",
+      "description": "Fashionable European capital famous for its art, architecture, and cultural scene.",
+      "type": "City",
+      "rating": 4.6,
+      "priceRange": {
+        "min": 100,
+        "max": 500
+      },
+      "images": [
+        "https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&auto=format&fit=crop&q=80"
+      ],
+      "reviews": [
+        {
+          "id": 4,
+          "userId": "77bf",
+          "username": "Garland",
+          "rating": 5,
+          "comment": "The Eiffel Tower at night is unforgettable",
+          "date": "2023-12-05",
+          "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+        }
+      ],
+      "highlights": [
+        "Eiffel Tower",
+        "Louvre Museum",
+        "Notre-Dame Cathedral"
+      ]
+    }
+  ]
+}
