@@ -7,9 +7,9 @@ import {
   MapPinIcon,
   MagnifyingGlassIcon,
   GlobeAmericasIcon,
-  ArrowsUpDownIcon // Correct name (with "s")
+  ArrowsUpDownIcon 
 } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';  // Add this line
+import { Link } from 'react-router-dom';
 import { FunnelIcon } from '@heroicons/react/20/solid';
 
 export default function Dashboard() {
@@ -179,34 +179,19 @@ export default function Dashboard() {
           <>
             {/* Destination Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {currentDestinations.map((destination) => (
-                <article 
-                  key={destination.id} 
-                  className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <div className="relative">
-                    <img
-                      src={destination.image}
-                      alt={destination.name}
-                      className="w-full h-48 object-cover rounded-t-xl"
-                      loading="lazy"
-                    />
-                    <button 
-                      className={`absolute top-4 right-4 p-2 rounded-full transition-colors ${
-                        user?.favorites?.includes(destination.id)
-                          ? 'bg-red-100 text-red-500'
-                          : 'bg-white/90 text-gray-400 hover:text-red-400'
-                      }`}
-                    >
-                      <HeartIcon className="h-6 w-6" />
-                    </button>
-                  </div>
-
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-1">
-                      {destination.name}
-                    </h3>
-                    
+            {currentDestinations.map((destination) => (
+              <article key={destination.id} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
+                <Link to={`/destination/${destination.id}`} className="block">
+                  <img
+                    src={destination.image}
+                    alt={destination.name}
+                    className="w-full h-48 object-cover rounded-t-xl"
+                  />
+                </Link>
+                <div className="p-6"></div>
+                  <Link to={`/destination/${destination.id}`} className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600">
+                    {destination.name}
+                  </Link>                    
                     <div className="flex items-center text-gray-600 mb-4">
                       <MapPinIcon className="h-5 w-5 mr-2 flex-shrink-0" />
                       <span className="truncate">{destination.location}</span>
@@ -233,17 +218,16 @@ export default function Dashboard() {
                       <span className="text-sm text-gray-500">
                         ${destination.priceRange?.min || '??'} - ${destination.priceRange?.max || '??'}
                       </span>
-                      <Link
-                        to={`/destinations/${destination.id}`}
-                        className="text-sm font-medium text-blue-600 hover:text-blue-800"
-                      >
-                        View details →
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
+                            <Link
+                            to={`/destination/${destination.id}`}
+                            className="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-800"
+                          >
+                            View details →
+                          </Link>
+                        </div>
+                      </article>
+                    ))}
+                </div>
 
             {/* Empty State */}
             {filteredDestinations.length === 0 && !isLoading && (

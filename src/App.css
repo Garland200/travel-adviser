@@ -1,0 +1,18 @@
+/* Smooth transitions for interactive elements */
+button, img[role="button"] {
+    transition: all 0.2s ease;
+  }
+  
+  /* Lightbox styling */
+  [class*="object-cover"], [class*="object-contain"] {
+    transition: transform 0.3s ease;
+  }
+  
+  [class*="object-cover"]:hover, [class*="object-contain"]:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Star rating */
+  svg[class*="text-yellow-500"] {
+    transition: color 0.2s, fill 0.2s;
+  }

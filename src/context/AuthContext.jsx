@@ -90,22 +90,29 @@ export function AuthProvider({ children }) {
     }
   };
   
-  const toggleFavorite = async (destinationId) => {
-    const newFavorites = user.favorites.includes(destinationId)
-      ? user.favorites.filter(id => id !== destinationId)
-      : [...user.favorites, destinationId];
-  
-    const updatedUser = { ...user, favorites: newFavorites };
-    setUser(updatedUser);
-    localStorage.setItem('travelAdvisorUser', JSON.stringify(updatedUser));
-    
-    // Sync with server
-    await fetch(`/api/users/${user.id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ favorites: newFavorites })
-    });
-  };
+// Add this to your existing AuthContext
+    const toggleFavorite = async (destinationId) => {
+      try {
+        const newFavorites = user.favorites.includes(destinationId)
+          ? user.favorites.filter(id => id !== destinationId)
+          : [...user.favorites, destinationId];
+        
+        // Update local state immediately for responsive UI
+        const updatedUser = { ...user, favorites: newFavorites };
+        setUser(updatedUser);
+        localStorage.setItem('travelAdvisorUser', JSON.stringify(updatedUser));
+        
+        // Mock API call
+        await new Promise(resolve => setTimeout(resolve, 300));
+        
+        return true;
+      } catch (error) {
+        console.error('Error updating favorites:', error);
+        // Revert on error
+        setUser(user);
+        return false;
+      }
+    };
 
   return (
     <AuthContext.Provider

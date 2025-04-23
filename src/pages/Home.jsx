@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -7,8 +6,8 @@ import { GlobeAmericasIcon, MagnifyingGlassIcon, StarIcon, HeartIcon } from '@he
 export default function Home() {
   const { user } = useAuth();
   const [destinations, setDestinations] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  // Fetch trending destinations from mock API
   useEffect(() => {
     const fetchTrending = async () => {
       try {
@@ -42,10 +41,15 @@ export default function Home() {
                 type="text"
                 placeholder="Search destinations..."
                 className="flex-1 p-4 text-gray-900 outline-none"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition">
+              <Link 
+                to={searchTerm ? `/dashboard?search=${encodeURIComponent(searchTerm)}` : '/dashboard'}
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition"
+              >
                 Search
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -90,8 +94,9 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-gray-800">Trending Now</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {destinations.map((destination) => (
-              <div key={destination.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+          {destinations.map((destination) => (
+            <div key={destination.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+              <Link to={`/destination/${destination.id}`}>
                 <img 
                   src={destination.image} 
                   alt={destination.name}
@@ -109,6 +114,7 @@ export default function Home() {
                     <span className="text-gray-500 ml-1">({destination.reviews?.length || 0} reviews)</span>
                   </div>
                 </div>
+              </Link>
               </div>
             ))}
           </div>

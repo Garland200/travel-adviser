@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
 import { StarIcon, HeartIcon, PencilSquareIcon } from '@heroicons/react/24/outline';
 
 export default function ProfilePage() {
@@ -23,8 +24,12 @@ export default function ProfilePage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await updateUser(formData);
-    setEditMode(false);
+    try {
+      await updateUser(formData);
+      setEditMode(false);
+    } catch (error) {
+      console.error('Update failed:', error);
+    }
   };
 
   return (
@@ -47,14 +52,14 @@ export default function ProfilePage() {
       {/* Edit Form */}
       {editMode ? (
         <form onSubmit={handleSubmit} className="mb-8 p-6 bg-gray-50 rounded-lg">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid gap-4">
             <div>
               <label className="block text-sm font-medium mb-2">Username</label>
               <input
                 type="text"
                 value={formData.username}
                 onChange={(e) => setFormData({...formData, username: e.target.value})}
-                className="w-full px-4 py-2 border rounded"
+                className="w-full p-2 border rounded"
                 required
               />
             </div>
@@ -64,53 +69,61 @@ export default function ProfilePage() {
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full px-4 py-2 border rounded"
+                className="w-full p-2 border rounded"
                 required
               />
             </div>
-            <div className="md:col-span-2">
+            <div>
               <label className="block text-sm font-medium mb-2">Bio</label>
               <textarea
                 value={formData.bio || ''}
                 onChange={(e) => setFormData({...formData, bio: e.target.value})}
-                className="w-full px-4 py-2 border rounded"
-                rows="4"
+                className="w-full p-2 border rounded"
+                rows="3"
               />
             </div>
+            <button
+              type="submit"
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Save Changes
+            </button>
           </div>
-          <button
-            type="submit"
-            className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-          >
-            Save Changes
-          </button>
         </form>
       ) : (
-        <p className="text-gray-700 mb-8">{user.bio || 'No bio yet'}</p>
+        <p className="text-gray-700 mb-8">{user.bio || 'No bio provided'}</p>
       )}
 
       {/* Favorites Section */}
-      <h2 className="text-2xl font-bold mb-6">Favorite Destinations</h2>
+      <h2 className="text-2xl font-bold mb-6 flex items-center">
+        <HeartIcon className="h-6 w-6 mr-2 text-red-500" />
+        Favorite Destinations
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {favorites.map(destination => (
-          <div key={destination.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition">
-            <img
-              src={destination.images[0]}
-              alt={destination.name}
-              className="w-full h-48 object-cover rounded-t-lg"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">{destination.name}</h3>
+      {favorites.map(destination => (
+        <Link 
+          to={`/destination/${destination.id}`}
+          key={destination.id}
+          className="bg-white rounded-lg shadow hover:shadow-md transition"
+        >
+          <img
+            src={destination.image}
+            alt={destination.name}
+            className="w-full h-48 object-cover rounded-t-lg"
+          />
+          <div className="p-4">
+            <h3 className="text-xl font-semibold mb-2">{destination.name}</h3>
               <div className="flex items-center">
                 <StarIcon className="h-5 w-5 text-yellow-500 mr-1" />
-                <span>{destination.rating}</span>
+                <span>{destination.rating.toFixed(1)}</span>
+                <span className="ml-2 text-gray-500">({destination.reviews.length})</span>
               </div>
-            </div>
           </div>
+        </Link>
         ))}
         {favorites.length === 0 && (
           <div className="col-span-full text-center py-12 text-gray-500">
-            No favorite destinations yet
+            No favorites yet - start exploring!
           </div>
         )}
       </div>
