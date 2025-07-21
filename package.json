@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@supabase/supabase-js": "^2.52.0",
     "axios": "^1.8.4",
+    "date-fns": "^4.1.0",
     "framer-motion": "^12.6.5",
     "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
