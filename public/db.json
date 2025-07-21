@@ -5,136 +5,231 @@
       "username": "testuser",
       "password": "test123",
       "email": "user@test.com",
-      "favorites": [1, 3],
-      "bio": "Travel enthusiast exploring the world",
-      "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+      "favorites": [1, 3, 7],
+      "bio": "Travel enthusiast exploring the world one destination at a time",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=testuser",
+      "created_at": "2024-01-15T10:30:00Z"
     },
     {
-      "id": "77bf",
-      "username": "Garland",
-      "password": "987654321",
-      "email": "GARLANDLEO200@GMAIL.COM",
-      "favorites": [2, 4],
-      "bio": "Adventure seeker and photography lover",
-      "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+      "id": "2",
+      "username": "wanderlust",
+      "password": "travel123",
+      "email": "wanderer@example.com",
+      "favorites": [2, 4, 6, 8],
+      "bio": "Adventure seeker and photography lover capturing moments around the globe",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=wanderlust",
+      "created_at": "2024-02-01T14:20:00Z"
     }
   ],
   "destinations": [
     {
       "id": 1,
-      "name": "Bali",
-      "location": "Indonesia",
-      "description": "Tropical paradise known for its forested volcanic mountains, iconic rice paddies, beaches and coral reefs.",
+      "name": "Santorini",
+      "location": "Greece",
+      "description": "A stunning Greek island known for its white-washed buildings, blue-domed churches, and breathtaking sunsets over the Aegean Sea. Experience luxury resorts, volcanic beaches, and world-class wine.",
       "type": "Beach",
-      "rating": 4.7,
+      "rating": 4.8,
       "priceRange": {
-        "min": 50,
-        "max": 300
+        "min": 120,
+        "max": 450
       },
-      "image": "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmFsaXxlbnwwfHwwfHx8MA%3D%3D",
+      "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&auto=format&fit=crop&q=60",
       "images": [
-        "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmFsaXxlbnwwfHwwfHx8MA%3D%3D",
-        "https://images.unsplash.com/photo-1518544866330-95b3e5aafd7b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFsaSUyMGJlYWNofGVufDB8fDB8fHww",
-        "https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFsaSUyMHRlbXBsZXxlbnwwfHwwfHx8MA%3D%3D"
+        "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800&auto=format&fit=crop&q=60"
       ],
+      "amenities": ["WiFi", "Pool", "Restaurant", "Spa", "Beach Access"],
+      "bestTimeToVisit": "April to October",
       "reviews": [
         {
           "id": 1,
           "userId": "1",
           "username": "testuser",
           "rating": 5,
-          "comment": "Absolutely breathtaking sunsets!",
+          "comment": "Absolutely magical! The sunsets are beyond words and the hospitality is incredible. A must-visit destination.",
           "date": "2024-03-15",
-          "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+          "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=testuser"
+        },
+        {
+          "id": 2,
+          "userId": "2",
+          "username": "wanderlust",
+          "rating": 5,
+          "comment": "Perfect romantic getaway. The views are spectacular and the local cuisine is amazing!",
+          "date": "2024-02-28",
+          "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=wanderlust"
         }
       ]
     },
     {
       "id": 2,
-      "name": "Ubud",
-      "location": "Bali, Indonesia",
-      "description": "Cultural heart of Bali with traditional crafts, dance, and lush rainforests.",
-      "type": "Cultural",
-      "rating": 4.5,
-      "priceRange": {
-        "min": 40,
-        "max": 250
-      },
-      "image": "https://images.unsplash.com/photo-1517713982677-4b66332f98de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGxhY2VzfGVufDB8fDB8fHww",
-      "images": [
-        "https://images.unsplash.com/photo-1517713982677-4b66332f98de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGxhY2VzfGVufDB8fDB8fHww",
-        "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dWJ1ZCUyMGJhbGl8ZW58MHx8MHx8fDA%3D",
-        "https://images.unsplash.com/photo-1564429091446-8d0ab7fad706?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHVidWQlMjBiYWxpfGVufDB8fDB8fHww"
-      ],
-      "reviews": [
-        {
-          "id": 2,
-          "userId": "77bf",
-          "username": "Garland",
-          "rating": 4,
-          "comment": "Amazing cultural experiences everywhere",
-          "date": "2024-02-20",
-          "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
-        }
-      ]
-    },
-    {
-      "id": 3,
       "name": "Kyoto",
       "location": "Japan",
-      "description": "Former imperial capital known for its classical Buddhist temples, gardens, and traditional wooden houses.",
-      "type": "Historical",
+      "description": "Ancient capital of Japan featuring over 2,000 temples and shrines, traditional wooden houses, formal gardens, and the famous bamboo groves. Experience authentic Japanese culture and cuisine.",
+      "type": "Cultural",
       "rating": 4.9,
       "priceRange": {
-        "min": 70,
-        "max": 400
+        "min": 80,
+        "max": 350
       },
-      "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a3lvdG98ZW58MHx8MHx8fDA%3D",
+      "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&auto=format&fit=crop&q=60",
       "images": [
-        "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a3lvdG98ZW58MHx8MHx8fDA%3D",
-        "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a3lvdG8lMjB0ZW1wbGV8ZW58MHx8MHx8fDA%3D",
-        "https://images.unsplash.com/photo-1578645510447-e68b9f49d4f0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8a3lvdG8lMjBiYW1ib298ZW58MHx8MHx8fDA%3D"
+        "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1578645510447-e68b9f49d4f0?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&auto=format&fit=crop&q=60"
       ],
+      "amenities": ["WiFi", "Traditional Ryokan", "Tea Ceremony", "Garden Views"],
+      "bestTimeToVisit": "March to May, September to November",
       "reviews": [
         {
           "id": 3,
           "userId": "1",
           "username": "testuser",
           "rating": 5,
-          "comment": "The temples are magical during cherry blossom season",
+          "comment": "The temples are magical during cherry blossom season. An unforgettable cultural experience!",
           "date": "2024-01-10",
-          "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+          "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=testuser"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Machu Picchu",
+      "location": "Peru",
+      "description": "Ancient Incan citadel set high in the Andes Mountains. This UNESCO World Heritage site offers breathtaking views and a glimpse into one of the world's greatest civilizations.",
+      "type": "Historical",
+      "rating": 4.7,
+      "priceRange": {
+        "min": 60,
+        "max": 200
+      },
+      "image": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&auto=format&fit=crop&q=60",
+      "images": [
+        "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=800&auto=format&fit=crop&q=60"
+      ],
+      "amenities": ["Guided Tours", "Hiking Trails", "Museum", "Restaurant"],
+      "bestTimeToVisit": "May to September",
+      "reviews": [
+        {
+          "id": 4,
+          "userId": "2",
+          "username": "wanderlust",
+          "rating": 5,
+          "comment": "Incredible historical site! The hike is challenging but absolutely worth it for the views.",
+          "date": "2024-01-20",
+          "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=wanderlust"
         }
       ]
     },
     {
       "id": 4,
+      "name": "Bali",
+      "location": "Indonesia",
+      "description": "Tropical paradise known for its forested volcanic mountains, iconic rice paddies, beaches, and coral reefs. Perfect blend of culture, adventure, and relaxation.",
+      "type": "Beach",
+      "rating": 4.6,
+      "priceRange": {
+        "min": 40,
+        "max": 300
+      },
+      "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&auto=format&fit=crop&q=60",
+      "images": [
+        "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=800&auto=format&fit=crop&q=60"
+      ],
+      "amenities": ["Beach Access", "Spa", "Yoga Classes", "Surfing", "Cultural Tours"],
+      "bestTimeToVisit": "April to October",
+      "reviews": []
+    },
+    {
+      "id": 5,
+      "name": "Swiss Alps",
+      "location": "Switzerland",
+      "description": "Majestic mountain range offering world-class skiing, hiking, and breathtaking alpine scenery. Experience luxury mountain resorts and pristine natural beauty.",
+      "type": "Mountain",
+      "rating": 4.8,
+      "priceRange": {
+        "min": 150,
+        "max": 600
+      },
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=60",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1527004760525-b9b8b6b0b8b0?w=800&auto=format&fit=crop&q=60"
+      ],
+      "amenities": ["Ski Lifts", "Mountain Restaurants", "Hiking Trails", "Spa", "Cable Cars"],
+      "bestTimeToVisit": "December to March (skiing), June to September (hiking)",
+      "reviews": []
+    },
+    {
+      "id": 6,
       "name": "Paris",
       "location": "France",
-      "description": "Fashionable European capital famous for its art, architecture, and cultural scene.",
+      "description": "The City of Light, famous for its art, architecture, cuisine, and romance. Home to iconic landmarks like the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.",
       "type": "City",
-      "rating": 4.6,
+      "rating": 4.5,
       "priceRange": {
         "min": 100,
         "max": 500
       },
-      "image": "https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFyaXN8ZW58MHx8MHx8fDA%3D",
+      "image": "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&fit=crop&q=60",
       "images": [
-        "https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFyaXN8ZW58MHx8MHx8fDA%3D",
-        "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWlmZmVsJTIwdG93ZXJ8ZW58MHx8MHx8fDA%3D",
-        "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG91dnJlJTIwbXVzZXVtfGVufDB8fDB8fHww"
+        "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&auto=format&fit=crop&q=60"
       ],
-      "reviews": [
-        {
-          "id": 4,
-          "userId": "77bf",
-          "username": "Garland",
-          "rating": 5,
-          "comment": "The Eiffel Tower at night is unforgettable",
-          "date": "2023-12-05",
-          "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
-        }
-      ]
+      "amenities": ["Museums", "Fine Dining", "Shopping", "Historic Sites", "River Cruises"],
+      "bestTimeToVisit": "April to June, September to October",
+      "reviews": []
+    },
+    {
+      "id": 7,
+      "name": "Maldives",
+      "location": "Indian Ocean",
+      "description": "Tropical paradise consisting of 1,200 coral islands. Known for crystal-clear waters, overwater bungalows, and world-class diving and snorkeling.",
+      "type": "Beach",
+      "rating": 4.9,
+      "priceRange": {
+        "min": 200,
+        "max": 1000
+      },
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=60",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&auto=format&fit=crop&q=60"
+      ],
+      "amenities": ["Overwater Villas", "Diving Center", "Spa", "Water Sports", "Fine Dining"],
+      "bestTimeToVisit": "November to April",
+      "reviews": []
+    },
+    {
+      "id": 8,
+      "name": "New York City",
+      "location": "USA",
+      "description": "The city that never sleeps. Experience world-class museums, Broadway shows, diverse neighborhoods, and iconic landmarks like Times Square and Central Park.",
+      "type": "City",
+      "rating": 4.4,
+      "priceRange": {
+        "min": 120,
+        "max": 800
+      },
+      "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&auto=format&fit=crop&q=60",
+      "images": [
+        "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=800&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=800&auto=format&fit=crop&q=60"
+      ],
+      "amenities": ["Museums", "Broadway Shows", "Shopping", "Restaurants", "Parks"],
+      "bestTimeToVisit": "April to June, September to November",
+      "reviews": []
     }
   ]
 }

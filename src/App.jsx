@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import { AuthPage } from './pages/AuthPage';
@@ -8,10 +9,21 @@ import Home from './pages/Home';
 import DestinationPage from './pages/DestinationPage';
 import ProfilePage from './pages/ProfilePage';
 import { useAuth } from './context/AuthContext';
+import './App.css';
 
 function App() {
   return (
     <AuthProvider>
+      <Toaster 
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+        }}
+      />
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -27,7 +39,8 @@ function App() {
               </ProtectedRoute>
             }
           />
-            <Route path="/destination/:id" element={<ConditionalDestinationPage />} />          <Route path="/profile" element={
+          <Route path="/destination/:id" element={<ConditionalDestinationPage />} />
+          <Route path="/profile" element={
             <ProtectedRoute>
               <ProfilePage />
             </ProtectedRoute>
